@@ -19,162 +19,164 @@ app.use((req, res, next) => {
 });
 
 app.post("/nakshatra-durations", async (req, res) => {
-  
-
   try {
-    const response = await axios.post(process.env.NAKSHATRA_API_END_POINT, req.body, {
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-    });
+    const response = await axios.post(
+      process.env.NAKSHATRA_API_END_POINT,
+      req.body,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+      }
+    );
 
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 app.post("/yoga-durations", async (req, res) => {
   try {
-    const response = await axios.post(process.env.YOGA_API_END_POINT, req.body, {
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-    });
+    const response = await axios.post(
+      process.env.YOGA_API_END_POINT,
+      req.body,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+      }
+    );
 
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 app.post("/tithi-durations", async (req, res) => {
-  console.log("Request Payload:", req.body);
   try {
-    const response = await axios.post(process.env.THITHI_API_END_POINT, req.body, {
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-      times,
-    });
+    const response = await axios.post(
+      process.env.THITHI_API_END_POINT,
+      req.body,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+      }
+    );
 
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 app.post("/karana-durations", async (req, res) => {
-
   try {
-    const response = await axios.post(process.env.KARANA_API_END_POINT, req.body, {
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-    });
+    const response = await axios.post(
+      process.env.KARANA_API_END_POINT,
+      req.body,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+      }
+    );
 
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 app.post("/aayanam", async (req, res) => {
-  console.log("Request Payload:", req.body);
-
- 
-
   try {
-    const response = await axios.post(process.env.AAYANAM_API_END_POINT, req.body, {
-      
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-    });
-    console.log(process.env.AAYANAM_API_END_POINT)
+    const response = await axios.post(
+      process.env.AAYANAM_API_END_POINT,
+      req.body,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+      }
+    );
+
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 app.post("/good-bad-", async (req, res) => {
-  console.log("Request Payload:", req.body);
-
-  
   try {
-    const response = await axios.post(process.env.GOOD_BAD_API_END_POINT, req.body, {
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-    });
+    const response = await axios.post(
+      process.env.GOOD_BAD_API_END_POINT,
+      req.body,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+      }
+    );
 
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 app.post("/rahu-kalam", async (req, res) => {
-  console.log("Request Payload:", req.body);
-
-
-
   try {
-    const response = await axios.post(process.env.RAHU_KALAM_API_END_POINT, req.body, {
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-    });
+    const response = await axios.post(
+      process.env.RAHU_KALAM_API_END_POINT,
+      req.body,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+      }
+    );
 
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 app.post("/yama-gandam", async (req, res) => {
-  console.log("Request Payload:", req.body);
-
-
-
   try {
-    const response = await axios.post(process.env.YAMA_KANDAM_API_END_POINT, req.body, {
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-    });
+    const response = await axios.post(
+      process.env.YAMA_KANDAM_API_END_POINT,
+      req.body,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+      }
+    );
 
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 app.post("/gulika-kalam", async (req, res) => {
-  console.log("Request Payload:", req.body);
-
-
-
   try {
-    const response = await axios.post(process.env.GULIKA_API_END_POINT, req.body, {
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-      },
-    });
+    const response = await axios.post(
+      process.env.GULIKA_API_END_POINT,
+      req.body,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+        },
+      }
+    );
 
     res.json(response.data);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
